@@ -11,9 +11,11 @@ import Personblog from './pages/Personblog.jsx'
 import Profile from './pages/Profile.jsx'
 import Navbar from './components/navbar.jsx'
 import Register from './pages/Register.jsx'
+import { Provider } from 'react-redux'
 
 
 createRoot(document.getElementById('root')).render(
+  <Provider store={(store)}>
   <BrowserRouter>
     <Navbar/>
     <Routes>
@@ -26,4 +28,5 @@ createRoot(document.getElementById('root')).render(
 
     </Routes>
   </BrowserRouter>,
+  </Provider>
 )
